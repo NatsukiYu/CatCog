@@ -1,0 +1,89 @@
+= CatCog
+夏木 悠 <@natsuki__yu>
+v1.0.0 2021-09-03
+
+:toc:
+:toc-title: 目次
+:icons: font
+:hardbreaks:
+
+++++
+<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.1.0/css/font-awesome.min.css">
+++++
+
+// ------------------------------------------ //
+
+猫がキーボードを歩いて送信したメッセージに，リアクションを送信します．
+
+== 操作方法
+
+自動で動作するため，操作の必要はありません．
+
+== 必要な権限
+
+Add Reactions:: メッセージにリアクションを送信するために使用します．
+
+.必要な権限
+[cols="<.<,<.<,<.<", frame=none, grid=none]
+|===
+a|.GENERAL PERMISSIONS
+* [ ] Administrator
+* [ ] View Audit Log
+* [ ] View Server Insights
+* [ ] Manage Server
+* [ ] Manage Roles
+* [ ] Manage Channels
+* [ ] Kick Members
+* [ ] Ban Members
+* [ ] Create Instant Invite
+* [ ] Change Nickname
+* [ ] Manage Nicknames
+* [ ] Manage Emojis
+* [ ] Manage Webhooks
+
+a|.TEXT PERMISSIONS
+* [ ] View Channels
+* [ ] Send Messages
+* [ ] Send TTS Messages
+* [ ] Manage Messages
+* [ ] Embed Links
+* [ ] Attach Files
+* [ ] Read Message History
+* [ ] Mention Everyone
+* [ ] Use External Emojis
+* [x] Add Reactions
+* [ ] Use Slash Commands
+
+a|.VOICE PERMISSIONS
+* [ ] Connect
+* [ ] Speak
+* [ ] Video
+* [ ] Mute Members
+* [ ] Deafen Members
+* [ ] Move Members
+* [ ] Use Voice Activity
+* [ ] Priority Speaker
+|===
+
+== 導入
+
+:domain: github.com
+:account: NatsukiYu
+:project: CatCog
+
+次のいずれかのコマンドでインストールすることができます．
+
+* `pip install git+https://{domain}/{account}/{project}.git`
+* `pip install git+ssh://{domain}/{account}/{project}.git`
+
+このCogは，詳細な設定を行うことができます．
+必要に応じて設定を行い，以下のようにCogを読み込んでください．
+
+.example/main.py
+[source,python]
+----
+include::./example/main.py[]
+----
+<1> 必要に応じてリアクションや判定条件を設定する (省略可)
+<2> Cogを読み込む
+<3> Botを実行する
